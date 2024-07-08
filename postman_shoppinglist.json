@@ -1,0 +1,370 @@
+{
+  "info": {
+    "name": "shop",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "bruno",
+      "event": []
+    },
+    {
+      "name": "Shopping List",
+      "item": [
+        {
+          "name": "shopping lists",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/shopping-lists",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "create shopping list",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/shopping-lists/",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"name\":\"Mmm\",\n\"shopping_date\": \"2024-07-08\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "update shopping list",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/shopping-lists/1",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"name\":\"SuperDuper\",\n\"shopping_date\": \"2024-07-08\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "delete shopping list",
+          "event": [],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/shopping-lists/1",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "show shopping list",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/shopping-lists/1",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Shopping List Item",
+      "item": [
+        {
+          "name": "create shopping item",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/shopping-lists/1/items",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"name\":\"Kaas\",\n\"quantity\": 1,\n\"unit\": \"kg\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "List shopping items",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/shopping-lists/1/items",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Show shopping item",
+          "event": [],
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/shopping-lists/1/items/1",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            }
+          }
+        },
+        {
+          "name": "Update shopping item",
+          "event": [],
+          "request": {
+            "method": "PUT",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/shopping-lists/1/items/1",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n\"name\":\"Rice\",\n\"quantity\": 2.5,\n\"unit\": \"Kg\",\n\"checked\": true\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "Delete shopping item",
+          "event": [],
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/shopping-lists/1/items/1",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "Auth",
+      "item": [
+        {
+          "name": "login",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/login",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"email\": \"jane@example.com\",\n  \"password\": \"s4cr4t_p455\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "register",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/register",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            },
+            "body": {
+              "mode": "raw",
+              "raw": "{\n  \"name\":\"jane doe\",\n  \"email\": \"jane@example.com\",\n  \"password\": \"s4cr4t_p455\",\n  \"password_confirmation\": \"s4cr4t_p455\"\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            }
+          }
+        },
+        {
+          "name": "logout",
+          "event": [],
+          "request": {
+            "method": "POST",
+            "header": [],
+            "url": {
+              "raw": "http://127.0.0.1:8000/api/v1/logout",
+              "host": [
+                "127",
+                "0",
+                "0",
+                "1"
+              ],
+              "path": [],
+              "query": [],
+              "variable": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "user",
+      "event": [],
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/v1/user",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "path": [],
+          "query": [],
+          "variable": []
+        }
+      }
+    }
+  ],
+  "variable": []
+}

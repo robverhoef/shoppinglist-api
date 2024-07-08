@@ -1,0 +1,387 @@
+{
+  "name": "shop",
+  "version": "1",
+  "items": [
+    {
+      "type": "folder",
+      "name": "Shopping List",
+      "items": [
+        {
+          "type": "http",
+          "name": "shopping lists",
+          "seq": 1,
+          "request": {
+            "url": "http://127.0.0.1:8000/api/v1/shopping-lists",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "create shopping list",
+          "seq": 1,
+          "request": {
+            "url": "http://127.0.0.1:8000/api/v1/shopping-lists/",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n\"name\":\"Mmm\",\n\"shopping_date\": \"2024-07-08\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "update shopping list",
+          "seq": 1,
+          "request": {
+            "url": "http://127.0.0.1:8000/api/v1/shopping-lists/1",
+            "method": "PUT",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n\"name\":\"SuperDuper\",\n\"shopping_date\": \"2024-07-08\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "delete shopping list",
+          "seq": 1,
+          "request": {
+            "url": "http://127.0.0.1:8000/api/v1/shopping-lists/1",
+            "method": "DELETE",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "show shopping list",
+          "seq": 1,
+          "request": {
+            "url": "http://127.0.0.1:8000/api/v1/shopping-lists/1",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Shopping List Item",
+      "items": [
+        {
+          "type": "http",
+          "name": "create shopping item",
+          "seq": 1,
+          "request": {
+            "url": "http://127.0.0.1:8000/api/v1/shopping-lists/1/items",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n\"name\":\"Kaas\",\n\"quantity\": 1,\n\"unit\": \"kg\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "List shopping items",
+          "seq": 1,
+          "request": {
+            "url": "http://127.0.0.1:8000/api/v1/shopping-lists/1/items",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Show shopping item",
+          "seq": 1,
+          "request": {
+            "url": "http://127.0.0.1:8000/api/v1/shopping-lists/1/items/1",
+            "method": "GET",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Update shopping item",
+          "seq": 1,
+          "request": {
+            "url": "http://127.0.0.1:8000/api/v1/shopping-lists/1/items/1",
+            "method": "PUT",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n\"name\":\"Rice\",\n\"quantity\": 2.5,\n\"unit\": \"Kg\",\n\"checked\": true\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "Delete shopping item",
+          "seq": 1,
+          "request": {
+            "url": "http://127.0.0.1:8000/api/v1/shopping-lists/1/items/1",
+            "method": "DELETE",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "folder",
+      "name": "Auth",
+      "items": [
+        {
+          "type": "http",
+          "name": "login",
+          "seq": 1,
+          "request": {
+            "url": "http://127.0.0.1:8000/api/v1/login",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"email\": \"jane@example.com\",\n  \"password\": \"s4cr4t_p455\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "register",
+          "seq": 1,
+          "request": {
+            "url": "http://127.0.0.1:8000/api/v1/register",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "json",
+              "json": "{\n  \"name\":\"jane doe\",\n  \"email\": \"jane@example.com\",\n  \"password\": \"s4cr4t_p455\",\n  \"password_confirmation\": \"s4cr4t_p455\"\n}",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "none"
+            }
+          }
+        },
+        {
+          "type": "http",
+          "name": "logout",
+          "seq": 1,
+          "request": {
+            "url": "http://127.0.0.1:8000/api/v1/logout",
+            "method": "POST",
+            "headers": [],
+            "params": [],
+            "body": {
+              "mode": "none",
+              "formUrlEncoded": [],
+              "multipartForm": []
+            },
+            "script": {},
+            "vars": {},
+            "assertions": [],
+            "tests": "",
+            "auth": {
+              "mode": "inherit"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "type": "http",
+      "name": "user",
+      "seq": 1,
+      "request": {
+        "url": "http://127.0.0.1:8000/api/v1/user",
+        "method": "GET",
+        "headers": [],
+        "params": [],
+        "body": {
+          "mode": "none",
+          "formUrlEncoded": [],
+          "multipartForm": []
+        },
+        "script": {},
+        "vars": {},
+        "assertions": [],
+        "tests": "",
+        "auth": {
+          "mode": "inherit"
+        }
+      }
+    }
+  ],
+  "environments": [],
+  "root": {
+    "request": {
+      "auth": {
+        "mode": "bearer",
+        "bearer": {
+          "token": "3|whateverevertokeyougotafterregisterorlogin"
+        }
+      },
+      "headers": [
+        {
+          "name": "Accept",
+          "value": "application/json",
+          "enabled": true,
+          "uid": "xDLPBdzKIzNzMZ7bcRTIo"
+        }
+      ],
+      "script": {},
+      "vars": {},
+      "tests": ""
+    },
+    "meta": {
+      "name": "shop"
+    }
+  },
+  "brunoConfig": {
+    "version": "1",
+    "name": "shop",
+    "type": "collection",
+    "ignore": [
+      "node_modules",
+      ".git"
+    ]
+  }
+}

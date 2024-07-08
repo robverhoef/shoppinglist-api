@@ -1,12 +1,13 @@
 {
-    "name": "laravel/laravel",
+    "name": "robverhoef/shoppinglist",
     "type": "project",
-    "description": "The skeleton application for the Laravel framework.",
+    "description": "A very basic shopping list REST API",
     "keywords": ["laravel", "framework"],
-    "license": "MIT",
+    "license": "WTFPL",
     "require": {
         "php": "^8.2",
         "laravel/framework": "^11.9",
+        "laravel/sanctum": "^4.0",
         "laravel/tinker": "^2.9"
     },
     "require-dev": {
