@@ -28,7 +28,7 @@ To run this locally:
  - [CORS](https://laravel.com/docs/11.x/routing#cors) has not been implemented yet.
  - See ```artisan route:list``` for all available routes.
  - Authentication is token based. Save the token when registering or logging in. 
- - You may want to use the postman_shoppinglist.json with [Postman](https://www.postman.com) or bruno_shoppinglist with [Bruno](https://www.usebruno.com) for testing. 
+ - You may want to use the /postman_shoppinglist.json with [Postman](https://www.postman.com) or /bruno_shoppinglist.json with [Bruno](https://www.usebruno.com) for testing. 
  - Data structure to be used in your front-end: 
   ```
     users: [name, email, password]
